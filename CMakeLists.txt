@@ -13,5 +13,5 @@ add_executable(
     ${crunch_SRC}
 )
 
-set_property(TARGET Crunch PROPERTY VS_DEBUGGER_WORKING_DIRECTORY $<TARGET_FILE_DIR:LevelEditor>)
+set_property(TARGET Crunch PROPERTY VS_DEBUGGER_WORKING_DIRECTORY $<TARGET_FILE_DIR:Crunch>)
 
