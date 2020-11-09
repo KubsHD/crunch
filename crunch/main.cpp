@@ -127,7 +127,7 @@ static string GetFileName(const string& path)
     return name;
 }
 
-static void LoadBitmap(const string& prefix, const string& path)
+static void LoadBitmap(const string& prefix, const wstring path)
 {
     if (optVerbose)
         cout << '\t' << PathToStr(path) << endl;
@@ -340,7 +340,7 @@ int main(int argc, const char* argv[])
     for (size_t i = 0; i < inputs.size(); ++i)
     {
         if (inputs[i].rfind('.') != string::npos)
-            LoadBitmap("", inputs[i]);
+            LoadBitmapA(NULL, inputs[i].c_str());
         else
             LoadBitmaps(inputs[i], "");
     }
